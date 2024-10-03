@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Pay via Cash",
+        "isActive": true
+    },
+    {
+        "name": "Pay via Visa, Mastercard...",
+        "isActive": false
+    }
+]

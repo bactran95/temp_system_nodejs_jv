@@ -1,0 +1,11 @@
+{
+	"some_thing_when_wrong": "Something went wrong",
+	"unauthorized": "Unauthorized",
+	"email_not_found": "Email not found",
+	"you_must_enter_email_and_password": "You must enter email and password",
+	"email_is_invalid": "Email is invalid",
+	"email_already_exists": "Email already exists",
+	"the_password_is_in_correct": "The password is incorrect",
+	"token_expired": "token is expired",
+	"token_invalid": "token is invalid"
+}

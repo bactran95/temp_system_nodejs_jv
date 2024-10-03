@@ -1,0 +1,19 @@
+build-develop:
+    stage: build
+    before_script:
+        - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+    script:
+        - bash /etc/gitlab-runner/select-sever-cicd.sh 'bash build.sh --time-period=60 --host-port=3099 --container-port=3000 --download-file=.env,'
+    only:
+        - develop
+
+deploy-develop:
+    stage: deploy
+    before_script:
+        - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+        - eval $(ssh-agent -s)
+    script:
+        - bash /etc/gitlab-runner/select-sever-cicd.sh 'bash deploy.sh --time-period=60 --host-port=3099 --container-port=3000'
+    only:
+        - develop
